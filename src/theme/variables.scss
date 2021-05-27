@@ -4,17 +4,17 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #33c5b4;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #cccccc;
+  --ion-color-primary-tint: #ffffff;
 
   /** secondary **/
-  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary: #37B6A7;
   --ion-color-secondary-rgb: 61, 194, 255;
-  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast: #299487;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #36abe0;
   --ion-color-secondary-tint: #50c8ff;
@@ -68,9 +68,9 @@
   --ion-color-medium-tint: #9d9fa6;
 
   /** light **/
-  --ion-color-light: #f4f5f8;
+  --ion-color-light:#37B6A7;
   --ion-color-light-rgb: 244, 245, 248;
-  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast: #fcfcfc;
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
@@ -234,3 +234,82 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+ion-tab-bar{
+  height: 65px !important;
+  display: flex;
+  align-items: center;
+}
+
+ion-content{
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.header-ios ion-toolbar{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  
+}
+
+
+
+.ion-header{
+  height: 70px;
+}
+
+
+.toolbar-container{
+  border: none;
+}
+
+
+
+ion-tab-button ion-icon:hover{
+  // css styling for hover state
+  color: #C4C4C4;
+  }   
+
+  ion-tab-button ion-icon {
+    
+    color:#1e1e1e;
+    
+  }
+
+  ion-fab-button ion-fab{
+    color: #C4C4C4;
+  }
+  ion-fab-button{
+    color: #C4C4C4;
+  }
+
+  a.button-native{
+    color: #C4C4C4;
+  }
+  
+  ion-tab-button{
+    height: 30px;
+    color:black;
+
+}
+
+a.ion-tab-button{
+  height: 40px;
+  color:#C4C4C4;
+
+}
+
+ion-avatar .img{
+width: 35px;
+padding-left:16px;
+}
+
+
+ion-button{
+  --ion-color-secondary-contrast: #299487;
+  border-radius: 6px;
+  --ion-text-color: #ffffff !important;
+}
+
+

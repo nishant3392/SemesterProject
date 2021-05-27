@@ -1,0 +1,13 @@
+
+<ion-card-content>
+
+  <div class="card" (click)="cardClicked.emit()" [@cardFlip]="data.state">
+    <div class="back">
+        <img src="assets/card-top.jpg">
+    </div>
+    <div class="front">
+        <img [src]="data.imageId">
+  
+    </div>
+  </div>
+</ion-card-content>

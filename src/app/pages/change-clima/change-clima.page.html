@@ -1,0 +1,85 @@
+<ion-header>
+        <ion-toolbar >
+          <ion-buttons slot="start">
+           <ion-back-button defaultHref ="welcome-screen"></ion-back-button>
+          </ion-buttons>         
+          <ion-title>Mental Shower</ion-title>
+        </ion-toolbar>
+      </ion-header>
+     
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-text><h2>Change Clima</h2></ion-text>
+  <ion-text class="ion-text-center">You can change one or more parameters.</ion-text>
+  <ion-grid > 
+    <ion-row class="maria-tab1"> 
+  <ion-col> 
+  <ion-list>  
+   <ion-label class="instructions" >Temperature: Range 18&#186; - 22&#186; </ion-label>
+   <ion-item>
+     <ion-range min="1" max="5" step="1" value="3" snaps color="secondary"> 
+       <ion-icon slot="start"src="../assets/icon/temperature.svg" size="small" ></ion-icon>
+       <ion-icon slot="end"src="../assets/icon/temperature.svg" size="large"></ion-icon>
+     </ion-range>
+   </ion-item>
+
+   <ion-label class="instructions">Air Flow:Range less or more</ion-label>
+    <ion-item>
+     <ion-range min="1" max="5" step="1" value="3" snaps color="secondary"> 
+       <ion-icon slot="start" src="../assets/icon/air-flow.svg" size="small" ></ion-icon>
+       <ion-icon slot="end" src="../assets/icon/air-flow.svg" size="large"></ion-icon>
+     </ion-range>
+   </ion-item>
+
+   <ion-label class="instructions">Humidity:Range less or more.</ion-label>
+    <ion-item>
+     <ion-range min="1" max="5" step="1" value="3" snaps color="secondary"> 
+       <ion-icon slot="start" src="../assets/icon/humidity.svg" size="small" ></ion-icon>
+       <ion-icon slot="end" src="../assets/icon/humidity.svg" size="large"></ion-icon>
+     </ion-range>
+   </ion-item>
+
+   <ion-label class="instructions">CO2: Clean the air.</ion-label>
+    <ion-item>
+     <ion-range min="1" max="3" step="1" value="2" snaps color="secondary"> 
+       <ion-icon slot="start" src="../assets/icon/CO2-2.svg" size="small" ></ion-icon>
+       <ion-icon slot="end" src="../assets/icon/CO2-2.svg" size="large"></ion-icon>
+     </ion-range>
+   </ion-item>
+
+  </ion-list>
+  
+</ion-col>
+</ion-row>
+</ion-grid>
+<div > 
+    
+  <ion-button expand="block" routerLink="/actual-status" style="font-weight: bold;" >SAVE CLIMATE</ion-button>
+  <ion-text class="instructions" >*The changes will take some minutes, will pop out a notification</ion-text>
+  </div>
+   <script>
+  const dualRange = document.querySelector('#dual-range');
+dualRange.value = { lower: 33, upper: 60 };
+</script>
+    
+</ion-content>
+<footer>
+  <div>
+    <ion-tab-bar slot="bottom" >
+      <ion-tab-button routerLink="/selection">
+        <ion-icon src="./assets/icon/home2.svg" class="ion-padding-top"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/game">
+        <ion-icon src="./assets/icon/game.svg" class="ion-padding-top"></ion-icon>
+      </ion-tab-button>
+
+       <!-- <ion-tab-button (click)="notifications()">  -->
+        <ion-tab-button routerLink="/notifications"> 
+         <ion-icon name="chatbox-outline" class="ion-padding-top"></ion-icon>  
+           <ion-badge id="notifications-badge" color="success">2</ion-badge>         
+       </ion-tab-button>
+      
+    </ion-tab-bar>
+</div>
+</footer>

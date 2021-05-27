@@ -1,0 +1,80 @@
+
+<ion-header>
+  <ion-toolbar >
+    
+    <ion-title size="medium">Mental Shower </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref ="tab3"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <ion-text><h2>zone status</h2></ion-text>
+  
+    <ion-grid > 
+      <ion-row class="maria-tab1"> 
+    <ion-col> 
+    <ion-list>
+      
+      <ion-item>
+        <ion-icon slot="start"src="../assets/icon/temperature.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>Temperature</ion-label> <ion-chip>
+          <ion-label>20°C</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start"src="../assets/icon/air-flow.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>Air flow</ion-label><ion-chip >
+          <ion-label>Good</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" src="../assets/icon/humidity.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>Humidity</ion-label><ion-chip>
+          <ion-label>Good</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start"src="../assets/icon/CO2-2.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>CO2</ion-label><ion-chip>
+          <ion-label>Good</ion-label>
+        </ion-chip>
+      </ion-item>
+    </ion-list>
+    <ion-text ><p>If you want to know the actual inner clima, you must update the clima. </p></ion-text>
+    <!-- <ion-text>Last update <b>07-05-2021</b> at <b>09:11</b></ion-text> -->
+    <ion-text>
+      <div>
+        <ion-label>
+          Last Update {{formattedDate}} at {{formattedTime}}
+        </ion-label>
+      </div>
+    </ion-text>
+
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+    <div class="ion-padding"> 
+     
+  <ion-button expand="block" routerLink="/sign-up" style="font-weight: bold;" >UPDATE CLIMA</ion-button>
+  <ion-text  ><p>*For update the clima you need first  <b routerLink="/sign-up" class="color"> SIGN UP</b> as user and  <b routerLink="/login" class="color">LOGIN </b> </p></ion-text>
+  </div>
+  </ion-content>
+  
+
+  <footer>
+    <div>
+      <ion-tab-bar slot="bottom" >
+        <ion-tab-button routerLink="/selection">
+          <ion-icon src="./assets/icon/home2.svg" class="ion-padding-top"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/game">
+          <ion-icon src="./assets/icon/game.svg" class="ion-padding-top"></ion-icon>
+        </ion-tab-button>
+ 
+      </ion-tab-bar>
+  </div>
+  </footer>

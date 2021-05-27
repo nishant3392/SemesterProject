@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title size="medium">Mental Shower </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref ="zona-status"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list> 
+
+  <ion-list-header >  
+    <ion-label>Notifications</ion-label>  
+  </ion-list-header>  
+
+  <ion-item class="mail" color="medium" (click)="showAlert()" >  
+    <ion-icon name="mail" ></ion-icon>  
+    <ion-label>&nbsp;Have a fun day...</ion-label>
+  </ion-item>  
+
+  <ion-item (click)="showAlert1()" color="medium">  
+    <ion-icon name="mail" ></ion-icon>  
+    <ion-label>&nbsp;Already sweating...</ion-label>  
+  </ion-item>  
+
+  <ion-item class="mail" color="medium" (click)="showAlert2()" >  
+    <ion-icon name="mail" ></ion-icon>  
+    <ion-label>&nbsp;Survey...</ion-label>  
+  </ion-item>  
+
+  <ion-item (click)="showAlert3()" color="medium">  
+    <ion-icon name="mail" ></ion-icon>  
+    <ion-label>&nbsp;Feel hot</ion-label>  
+  </ion-item>  
+
+  <ion-item (click)="showAlert4()" color="medium">  
+    <ion-icon name="mail"></ion-icon>  
+    <ion-label>&nbsp;Ideal humidity</ion-label>  
+  </ion-item> 
+
+</ion-list>
+</ion-content>
+
+<footer>
+  <div class="footer">
+</div>
+</footer>

@@ -1,0 +1,92 @@
+<ion-header  >
+  <ion-toolbar >
+    <div class="display">
+    <ion-avatar >
+      <img src="assets\icon\grey70_logo-70hWhite.svg">
+    </ion-avatar> 
+    <ion-title class="title">Mental Shower</ion-title>
+  </div>
+  </ion-toolbar>
+ </ion-header>
+  
+ <ion-content [fullscreen]="true" class="ion-padding">
+  <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+    <ion-fab-button>
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="light">
+        <ion-icon name="person" routerLink="/profile"></ion-icon>
+      </ion-fab-button>
+     <ion-fab-button color="light">
+     <ion-icon name="help" routerLink="/help"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <div class="text-top">
+  <ion-text><h3><b>Hi !!</b></h3></ion-text>
+  <ion-text><p>Welcome to Mental Shower by Vent2U</p></ion-text>
+</div>
+  <ion-grid > 
+    
+    <ion-row class="maria-tab1"> 
+  <ion-col> 
+   <ion-text><p>You need to select a room, the information will be at the door.</p></ion-text>   
+  <ion-item>
+    <ion-icon slot="start"src="../assets/icon/room.svg" ></ion-icon>
+    <ion-label >Rooms</ion-label>
+    <ion-select interface="popover" >
+      <ion-select-option value="Room1">R-1</ion-select-option>
+      <ion-select-option value="Room2">R-2</ion-select-option>
+      <ion-select-option value="Room3">R-3</ion-select-option>
+      <ion-select-option value="Room4">R-4</ion-select-option>
+    <!-- <ion-select-option *ngFor="let room of rooms"  > {{rooms}} </ion-select-option> -->
+    </ion-select>
+  </ion-item>
+  <ion-text><p>Inside the room, you need select your Zone that is the number of the table.</p></ion-text>
+  <ion-item>
+    <ion-icon slot="start"src="../assets/icon/table.svg" ></ion-icon>
+    <ion-label>Zones</ion-label>
+    <ion-select interface="popover">
+      <ion-select-option value="zone1">Z-1</ion-select-option>
+      <ion-select-option value="zone2">Z- 2</ion-select-option>
+      <ion-select-option value="zone3">Z- 3</ion-select-option>
+      <ion-select-option value="zone4">Z- 4</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-text><p>Pick your chair, they are only 4 per table.</p></ion-text>
+  <ion-item>
+    <ion-icon slot="start"src="../assets/icon/chair.svg" ></ion-icon>
+    <ion-label>Chairs</ion-label>
+    <ion-select interface="popover">
+      <ion-select-option value="chair1">Ch-1</ion-select-option>
+      <ion-select-option value="chair2">Ch-2</ion-select-option>
+      <ion-select-option value="chair3">Ch-3</ion-select-option>
+      <ion-select-option value="chair4">Ch-4</ion-select-option>
+    </ion-select>
+  </ion-item>
+  </ion-col>
+</ion-row>
+</ion-grid>
+
+<ion-button routerLink="/zona-status"  expand="block" style="font-weight: bold;" >SAVE</ion-button>
+</ion-content>
+<footer>
+  <div>
+    <ion-tab-bar slot="bottom" >
+      <ion-tab-button routerLink="/selection">
+        <ion-icon src="./assets/icon/home2.svg" class="ion-padding-top"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button routerLink="/game">
+        <ion-icon src="./assets/icon/game.svg" class="ion-padding-top"></ion-icon>
+      </ion-tab-button>
+      
+    </ion-tab-bar>
+</div>
+</footer>
+
+
+
+ 

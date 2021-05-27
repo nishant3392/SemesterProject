@@ -1,0 +1,86 @@
+
+<ion-header>
+  <ion-toolbar >
+    <ion-title size="medium">Mental Shower </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref ="zona-status"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-text><h2>zone actual status</h2></ion-text>
+   <ion-grid > 
+    <ion-row class="maria-tab1"> 
+    <ion-col> 
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start"src="../assets/icon/temperature.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>Temperature</ion-label> <ion-chip>
+          <!-- <ion-label>{{temp}}20*</ion-label> -->
+          <ion-label>20°C</ion-label>
+
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start"src="../assets/icon/air-flow.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>Air flow</ion-label><ion-chip >
+          <ion-label>Good</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" src="../assets/icon/humidity.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>Humidity</ion-label><ion-chip>
+          <ion-label>Dry</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start"src="../assets/icon/CO2-2.svg" class="#C4C4C4"></ion-icon>
+        <ion-label>CO2</ion-label><ion-chip>
+          <ion-label>Regular</ion-label>
+        </ion-chip>
+      </ion-item>
+    </ion-list>
+    <div class="ion-padding">
+    <!-- <ion-text>Last update today <b>11-05-2021</b> at <b>10:11</b></ion-text>  -->
+    <ion-text>
+      <div>
+        <ion-label>
+          Last Update {{formattedDate}} at {{formattedTime}}
+        </ion-label>
+      </div>
+    </ion-text>
+  </div>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+   <div class="ion-padding"> 
+   <ion-text align-text-center >Are you <b>not </b> comfortable with the clima? </ion-text>  
+   <ion-item>
+    <ion-icon slot="start"src="../assets/icon/democracy.svg" class="#C4C4C4"></ion-icon>
+    <ion-text class="instructions" ><p>The system stablished zone democracy, so ask your mates in the table if they want to change. Use the poll, 3 of 4 votes will allow you to change the clima.</p></ion-text>
+  </ion-item>
+  <ion-button expand="block" routerLink="/poll" style="font-weight: bold;">GOT TO THE POLL </ion-button>
+  </div>
+  
+ </ion-content>
+  
+  <footer>
+    <div>
+      <ion-tab-bar slot="bottom" >
+        <ion-tab-button routerLink="/selection">
+          <ion-icon src="./assets/icon/home2.svg" class="ion-padding-top"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/game">
+          <ion-icon src="./assets/icon/game.svg" class="ion-padding-top"></ion-icon>
+        </ion-tab-button>
+
+         <!-- <ion-tab-button (click)="notifications()">  -->
+          <ion-tab-button routerLink="/notifications"> 
+           <ion-icon name="chatbox-outline" class="ion-padding-top"></ion-icon>  
+             <ion-badge id="notifications-badge" >2</ion-badge>         
+         </ion-tab-button>
+        
+      </ion-tab-bar>
+  </div>
+  </footer>

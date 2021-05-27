@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+     <ion-back-button defaultHref ="sign-up"></ion-back-button>
+    </ion-buttons>         
+    <ion-title>Mental Shower</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-content>
+  <ion-card class="login">
+    <div class="login-section ion-padding">
+        <div class="heading ion-padding">
+            <h1>Log In </h1>
+            <p>Log into Account to Continue</p>
+        </div>
+        <div class="login-form ion-padding">
+            
+            <div class="form-input">
+                <ion-icon name="mail-outline"></ion-icon>
+                <ion-item>
+                    <ion-label position="floating">Email</ion-label>
+                    <ion-input type="mmail" [(ngModel)]="email" name="email"></ion-input>
+                </ion-item>
+            </div>
+            
+            <div class="form-input">
+                <ion-icon name="key-outline"></ion-icon>
+                <ion-item>
+                    <ion-label position="floating">Password</ion-label>
+                    <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+                </ion-item>
+            </div>
+            
+        </div>
+        
+         <div class="action-button ion-padding">
+            <ion-button size="medium" class="login-button" routerLink="/actual-status"(click)="login()" >Log In</ion-button>
+            <h3>Doesn't have a account? <span routerLink="/sign-up">Sign Up</span></h3>
+        </div>
+    </div>
+ </ion-card>
+
+</ion-content>

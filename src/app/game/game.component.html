@@ -1,0 +1,28 @@
+<ion-header  >
+  <ion-toolbar >
+    <ion-title class="title">Mental Shower</ion-title>
+  </ion-toolbar>
+ </ion-header>
+
+<ion-tabs  class="ion-padding-bottom">
+  <ion-tab-bar slot="bottom" >
+    <ion-tab-button routerLink="/selection">
+      <ion-icon src="./assets/icon/home2.svg" class="ion-padding-top"></ion-icon>
+    </ion-tab-button>
+  
+  </ion-tab-bar>
+</ion-tabs>
+<ion-card class="game">Memory Game</ion-card>
+
+<ion-card class="frame">
+  <div>
+    <p class="text-center"></p>
+    <div class="grid padding">
+      <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+      </app-game-card>
+    </div>
+  </div>
+</ion-card>
+<ion-card-content class="note">
+  <p><br><strong>INTERESTING</strong> <br> info on the cards just find two identical</p>
+</ion-card-content>

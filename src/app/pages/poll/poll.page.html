@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar >
+    
+    <ion-title size="medium">Mental Shower </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref ="actual-status"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+  <form [formGroup]="VoteForm" (ngSubmit)="CreateRecord()">
+    <ion-list-header>
+      <ion-label>Do you want to change the climate?</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="Name"></ion-input>
+    </ion-item>
+
+    <ion-radio-group value="change" formControlName="Answer">
+          <ion-item>
+            <ion-label><ion-icon name="thumbs-up" color= "primary" size=large></ion-icon> Yes</ion-label>
+            <ion-radio slot="end" color="success" value="Yes"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label><ion-icon name="thumbs-down" color= "medium" size=large ></ion-icon> No</ion-label>
+            <ion-radio slot="end" color="tertiary" value="No"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+
+      <div class="action-button" class=ion-padding >
+      <ion-button expand="block"   (click)="CreateRecord()" [disabled]="VoteForm.invalid">
+        Send Vote
+      </ion-button>
+      
+      </div>
+
+  </form>
+</ion-card>
+
+  <ion-card *ngFor="let item of VoteList" color="primary">
+    <span *ngIf="!item.isEdit; else elseBlock">
+      <ion-card-header>
+        <ion-card-title>{{item.Name}}</ion-card-title>
+        <ion-card-subtitle>Vote: {{item.Answer}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-button shape="round" color="secondary" size="small" (click)="EditRecord(item)">
+          <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+
+        </ion-button>
+        <ion-button shape="round" color="danger" size="small" (click)="RemoveRecord(item.id)">
+          <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+
+        </ion-button>
+      </ion-card-content>
+    </span>
+    <ng-template #elseBlock>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                Edit
+              </ion-col>
+              <ion-col>
+                <ion-button fill="solid" color="medium" size="small" (click)="item.isEdit = false">
+                  Cancel
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="solid" color="success" size="small" (click)="UpdateRecord(item)">
+                  Update
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label><strong>Name</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Answer</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditAnswer"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ng-template>
+    
+  </ion-card>
+  <div class="action-button" class=ion-padding>
+      <ion-button routerLink="/change-clima" expand="block" >
+       Change Climate
+      </ion-button>
+    </div>
+</ion-content>
+
+<footer>
+    <div>
+      <ion-tab-bar slot="bottom" >
+        <ion-tab-button routerLink="/selection">
+          <ion-icon src="./assets/icon/home2.svg" class="ion-padding-top"></ion-icon>
+        </ion-tab-button>
+    
+        <ion-tab-button routerLink="/game">
+          <ion-icon src="./assets/icon/game.svg" class="ion-padding-top"></ion-icon>
+        </ion-tab-button>
+ 
+      </ion-tab-bar>
+  </div>
+  </footer>

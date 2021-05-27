@@ -1,0 +1,36 @@
+h2{
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+ion-item{
+  padding:0px;
+}
+
+.maria-tab1{
+  padding: 8px;
+  border-radius: 26px;
+  border: 1px solid #C4C4C4;
+}
+.instructions{
+  font-size: 12px;
+}
+ion-chip{
+background-color:  #A3E6DE;
+}
+.range-knob-handle{
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+
+ion-tab-button{
+  height: 40px;
+  color:black;
+
+}
+ion-badge{
+    
+  background: sandybrown;
+}
